@@ -4,6 +4,7 @@ class Cards {
     
     data = [];
     parentElem = null;
+    instance = null;
 
     constructor(data) {
         // setting data for cards to render and display
@@ -13,6 +14,7 @@ class Cards {
     // to set the parent element where cards will get rendered
     setParentElement(elem) {
         this.parentElem = elem;
+        this.parentElem.innerHTML = '';
     }
 
     render() {
