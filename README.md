@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/60a40918-59ff-44aa-bf4b-47a2ccf603de/deploy-status)](https://app.netlify.com/sites/sortnshuffle/deploys)
 
-# sortsNhuffle JS
+# sortNShuffle JS
 
 Demo: https://sortnshuffle.netlify.app/
 
