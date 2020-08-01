@@ -2,6 +2,7 @@ import { CARDS_DATA } from './constants/app.constants.js';
 import { Utils } from './utils/utils.js';
 import { Cards } from './cards/cards.js';
 import { Actions } from './actions/actions.js';
+
 class SortNShuffle {
 
     setRootElementById(rootId) {
@@ -33,7 +34,7 @@ class SortNShuffle {
         cards.setParentElement(cardsWrapper);
         cards.render();
         
-        // rendering actions
+        // rendering button actions
         const actions = new Actions();
         actions.setParentElement(actionWrapper);
         actions.render();

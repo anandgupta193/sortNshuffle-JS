@@ -70,7 +70,7 @@ body {
     }
 
     .main {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding: 0px;
     }
@@ -84,6 +84,7 @@ body {
     .action-wrapper {
         flex-direction: row;
         padding: 16px;
+        flex: 0;
     }
 
     .card-wrapper {
