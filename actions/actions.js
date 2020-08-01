@@ -4,28 +4,34 @@ import { Cards } from '../cards/cards.js';
 
 class Actions {
 
+    cardsData = CARDS_DATA;
+
     // to set the parent element where cards will get rendered
     setParentElement(elem) {
         this.parentElem = elem;
         this.parentElem.innerHTML = '';
     }
 
-    renderCards(cardsData) {
-        const cards = new Cards(cardsData);
+    renderCards() {
+        const cards = new Cards(this.cardsData);
         cards.setParentElement(document.getElementById('cards-wrapper'));
         cards.render();
     }
 
     // handle shuffle click
     onShuffle() {
-        const shuffledCards = Utils.shuffle(CARDS_DATA);
-        this.renderCards(shuffledCards);
+        this.cardsData = Utils.shuffle(CARDS_DATA);
+        this.renderCards();
     }
 
     // handle sort click
     onSort() {
-        const sortedCards = CARDS_DATA;
-        this.renderCards(sortedCards);
+        this.cardsData = CARDS_DATA;
+        this.renderCards();
+    }
+
+    onResize() {
+        this.renderCards();
     }
 
     render() {
@@ -50,6 +56,9 @@ class Actions {
         sortButtonNode.appendChild(sortTextNode);
         sortButtonNode.addEventListener('click', this.onSort.bind(this));
         this.parentElem.appendChild(sortButtonNode);
+
+        // handling dynamic media queries
+        window.onresize = this.onResize.bind(this);
 
     }
     

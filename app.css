@@ -37,11 +37,12 @@ body {
 
 .card-wrapper {
     flex: 1 1 30%;
-    width: 100px;
     color: white;
-    text-align: center;
-    font-size: 10rem;
+    font-size: 8rem;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button {

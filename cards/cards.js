@@ -28,7 +28,13 @@ class Cards {
             });
             const cardTextNode = document.createTextNode(card.value);
             cardNode.appendChild(cardTextNode);
-            cardNode.style['background-color'] = card.color;
+            if (window.innerWidth > 450) {
+                cardNode.style['background-color'] = card.color;
+                cardNode.style['border-left'] = 'none';
+            } else {
+                cardNode.style['border-left'] = `10px solid ${card.color}`;
+                cardNode.style['background-color'] = `lightgray`;
+            }
             this.parentElem.appendChild(cardNode);
         });
     }
