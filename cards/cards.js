@@ -33,7 +33,7 @@ class Cards {
                 cardNode.style['border-left'] = 'none';
             } else {
                 cardNode.style['border-left'] = `10px solid ${card.color}`;
-                cardNode.style['background-color'] = `lightgray`;
+                cardNode.style['background-color'] = `#eeeeee`;
             }
             this.parentElem.appendChild(cardNode);
         });
