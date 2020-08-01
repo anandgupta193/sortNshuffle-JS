@@ -28,6 +28,7 @@ class Cards {
             });
             const cardTextNode = document.createTextNode(card.value);
             cardNode.appendChild(cardTextNode);
+            cardNode.style['background-color'] = card.color;
             this.parentElem.appendChild(cardNode);
         });
     }
