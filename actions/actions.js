@@ -58,8 +58,8 @@ class Actions {
         this.parentElem.appendChild(sortButtonNode);
 
         // handling dynamic media queries
-        window.onresize = this.onResize.bind(this);
-
+        const mediaQuery = window.matchMedia("(max-width: 450px)")
+        mediaQuery.addListener(this.onResize.bind(this))
     }
     
 }
